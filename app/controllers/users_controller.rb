@@ -1,4 +1,6 @@
 class UsersController < TwirpRailsController
+  before_action :authorize!
+
   USERS = [
     { id: 1, name: 'Anna' },
     { id: 2, name: 'Reina' },
@@ -25,5 +27,9 @@ class UsersController < TwirpRailsController
 
   def current_user_name
     @current_user_name ||= USERS.sample[:name]
+  end
+
+  def authorize!
+    Rails.logger.info('--- authorized! ---')
   end
 end
