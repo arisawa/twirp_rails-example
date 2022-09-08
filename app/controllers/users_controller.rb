@@ -13,8 +13,17 @@ class UsersController < TwirpRailsController
   def get_user(req, _env)
     user = USERS.find { |u| u[:id] == req.id }
 
+    Rails.logger.info("current_user_name1: #{current_user_name}")
+    Rails.logger.info("current_user_name2: #{current_user_name}")
+
     raise ActiveRecord::RecordNotFound unless user
 
     user
+  end
+
+  private
+
+  def current_user_name
+    @current_user_name ||= USERS.sample[:name]
   end
 end
