@@ -38,3 +38,6 @@ module TwirpRailsExample
     config.api_only = true
   end
 end
+
+require 'user_pb'
+require 'user_twirp'
