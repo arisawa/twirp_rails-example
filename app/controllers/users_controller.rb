@@ -1,4 +1,6 @@
-class UsersController < TwirpRailsController
+class UsersController < ApplicationController
+  include TwirpRails::Controller
+
   before_action :authorize!
 
   USERS = [

@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:arisawa/twirp_rails.git
+  revision: 2a6ff280bdff1f8a19141c638be608b2de626f6d
+  branch: main
+  specs:
+    twirp_rails (0.1.0)
+      rails (>= 6.0.0)
+      twirp (~> 1.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,7 +102,7 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    google-protobuf (3.21.5-x86_64-linux)
+    google-protobuf (3.21.6-x86_64-linux)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     listen (3.7.1)
@@ -181,7 +190,7 @@ DEPENDENCIES
   rails (~> 6.1.6, >= 6.1.6.1)
   spring
   sqlite3 (~> 1.4)
-  twirp
+  twirp_rails!
   tzinfo-data
 
 RUBY VERSION
